@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Events</title>
+    <style>
+        #btn{
+            padding:10px 14px;
+            background-color: red;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+<body>
+     <!-- Browser events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+    mousemove
+
+    submit 
+    focus
+
+    DOMContentLoaded
+
+    transitionend -->
+    <div class="container">
+        <h1>This is my heading  </h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit impedit totam hic aspernatur veritatis, illo ab, ex autem ipsum, aut mollitia quisquam praesentium temporibus. Nihil ratione at ipsam cum cupiditate mollitia rerum magni labore molestiae, sunt, magnam asperiores veniam eveniet ex excepturi possimus autem voluptatem dignissimos nesciunt in aliquid iste explicabo error consequuntur! Ipsum, maxime blanditiis quaerat exercitationem voluptas eum, atque placeat nemo, autem eaque officia nesciunt in! Explicabo, reiciendis. Esse sapiente illum commodi quaerat eos pariatur explicabo molestias illo libero, aspernatur rem, veniam soluta voluptatem omnis distinctio corporis minus vitae officiis amet reprehenderit suscipit vel? Qui dolorum molestias, illum alias suscipit est saepe, consequatur magnam quia incidunt sint temporibus placeat. Facilis nesciunt deserunt autem similique aperiam nam incidunt ducimus provident dignissimos inventore reiciendis recusandae at eligendi quidem, velit dolores laboriosam qui. Animi expedita mollitia natus quam vitae ipsa ducimus ipsum hic eos ipsam suscipit numquam, totam tempora alias eaque esse sint. Maxime numquam fugiat quasi recusandae? Illo harum debitis fugit quae eos accusamus nihil nulla fuga est suscipit perspiciatis quasi hic consectetur, ab minima, perferendis rerum molestiae natus, magni cupiditate sit odit ipsa velit! Aut, architecto culpa. Praesentium voluptatibus, adipisci magni quae dignissimos officia assumenda quia! Soluta doloremque eos, praesentium repudiandae debitis cum illum incidunt molestiae odio, veniam enim laboriosam laborum. Quis suscipit repudiandae odio labore, quidem et voluptas? Incidunt minima, tempora ipsam debitis quaerat iure. Excepturi quis sed maxime illum quidem.
+        </p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run(){
+            console.log('Mouse Inside')
+        });
+
+        para.addEventListener('mouseout', function run(){
+            console.log('Mouse now went outside')
+        });
+
+
+    function toggleHide(){
+        // let btn = document.getElementById('btn');
+        let para = document.getElementById('para'); 
+        if(para.style.display != 'none'){
+        para.style.display = 'none';
+        }
+        else{
+        para.style.display = 'block';
+        }
+    }
+    </script>
+</body>
+</html>
